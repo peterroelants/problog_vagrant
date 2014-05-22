@@ -1,0 +1,9 @@
+# Don't track pycache folders
+__pycache__
+.svn
+*~
+*.pyc
+.project
+.pydevproject
+docs/website/*.html
+problog2.zip
