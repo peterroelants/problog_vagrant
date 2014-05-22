@@ -19,16 +19,6 @@ sudo apt-get -y install unzip
 # install gmp
 sudo apt-get -y install libgmp-dev
 
-# isntall dsharp
-# cd /vagrant/
-# mkdir dsharp
-# cd ./dsharp
-# hg clone https://bitbucket.org/haz/dsharp
-# cd ./dsharp/
-# cp Makefile_gmp Makefile
-# make
-# cd /vagrant/
-
 # install Yap
 
 # set up dependencies
@@ -53,7 +43,16 @@ cd ../problog/
 wget http://dtai.cs.kuleuven.be/problog/get_the_zip.php -O problog2.zip
 unzip problog2.zip -d problog2
 
-# # change the name of the dsharp dir
-# platform_name=$(python3 /vagrant/python_scripts/get_platform_name.py)
-# cd /vagrant/problog/problog2/assist/
-# mv ./linux_x86_64/ $platform_name
+# remove the linux_x86_64 dir, compile dshapr, en make it the new dir
+# remove dir
+rm -rf /vagrant/problog/problog2/assist/linux_x86_64/
+# compile dsharp
+cd /vagrant/problog/problog2/assist/
+hg clone https://bitbucket.org/haz/dsharp
+cd ./dsharp/
+cp Makefile_gmp Makefile
+make
+# get platform name
+platform_name=$(python3 /vagrant/python_scripts/get_platform_name.py)
+cd /vagrant/problog/problog2/assist/
+mv dsharp $platform_name
