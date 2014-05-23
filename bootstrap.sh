@@ -46,18 +46,3 @@ cd /home/vagrant/libs/
 wget http://dtai.cs.kuleuven.be/problog/get_the_zip.php -O problog2.zip
 unzip problog2.zip -d problog2
 
-# uncomment this if dsharp needs to be compiled
-# # remove the linux_x86_64 dir, compile dshapr, en make it the new dir
-# # remove dir
-# rm -rf /vagrant/problog/problog2/assist/linux_x86_64/
-# # compile dsharp
-# cd /vagrant/problog/problog2/assist/
-# hg clone https://bitbucket.org/haz/dsharp
-# cd ./dsharp/
-# cp Makefile_gmp Makefile
-# make
-# get platform name
-# platform_name=$(python3 /vagrant/python_scripts/get_platform_name.py)
-# # cd /vagrant/problog/problog2/assist/
-# # mv dsharp $platform_name
-# echo $platform_name
