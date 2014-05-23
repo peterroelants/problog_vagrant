@@ -6,12 +6,12 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # load inital model
-  config.vm.box = "hashicorp/precise32"
+  config.vm.box = "hashicorp/precise64"
   # Set the memory
-  #config.vm.customize ["modifyvm", :id, "--memory", 1024]
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 1024
+  end
 
   # provision from bootstrap.sh
   config.vm.provision :shell, :path => "bootstrap.sh"
-
-
 end
