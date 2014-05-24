@@ -9,6 +9,7 @@ Set up vagrant
 --------------
 
 Install [Vagrant](http://www.vagrantup.com/downloads.html).
+
 Install latest [VirtualBox version](https://www.virtualbox.org/wiki/Downloads).
 
     mkdir vagrant_problog
@@ -29,9 +30,11 @@ Problog usage when in shell
 ---------------------------
 
 Problog will be installed in:
+
     /home/vagrant/libs/problog2/
 
 Examples:
+
     /home/vagrant/libs/problog2/src/problog.py -h
     /home/vagrant/libs/problog2/src/problog.py /home/vagrant/libs/problog2/tests/models/1_tossing_coin.pl
 
