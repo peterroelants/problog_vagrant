@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
 
-# install python
 sudo apt-get update
+
+# install python
 sudo apt-get -y install python3
 
 # install git
 sudo apt-get -y install git
-
-# install mercurial (needed if dsharp needs to be compiled)
-# sudo apt-get -y install mercurial
 
 # install make
 sudo apt-get -y install make
@@ -29,12 +27,12 @@ sudo apt-get -y install g++
 sudo apt-get -y install zlib1g-dev
 sudo apt-get -y install libncurses5-dev
 
-cd /home/vagrant/
-mkdir ./libs/
+mkdir /home/vagrant/libs/
 # actually install Yap
 cd /home/vagrant/libs/
 git clone   git://yap.dcc.fc.up.pt/yap-6
-cd ./yap-6/
+#git clone git://gitorious.org/yap-git/mainline.git
+cd /home/vagrant/libs/yap-6/
 git submodule init
 git submodule update
 ./configure --enable-tabling=yes
