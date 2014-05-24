@@ -21,11 +21,7 @@ sudo apt-get -y install libgmp-dev
 
 # set up dependencies
 # http://sourceforge.net/p/yap/mailman/message/31633652/
-sudo apt-get -y install libreadline6-dev
-sudo apt-get -y install libgmp3-dev
-sudo apt-get -y install g++
-sudo apt-get -y install zlib1g-dev
-sudo apt-get -y install libncurses5-dev
+sudo apt-get -y install libreadline6-dev libgmp3-dev g++ zlib1g-dev libncurses5-dev
 
 mkdir /home/vagrant/libs/
 # actually install Yap
