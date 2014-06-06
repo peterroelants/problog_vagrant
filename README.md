@@ -12,9 +12,8 @@ Install [Vagrant](http://www.vagrantup.com/downloads.html).
 
 Install latest [VirtualBox version](https://www.virtualbox.org/wiki/Downloads).
 
-    mkdir vagrant_problog
-    cd vagrant_problog
     git clone https://github.com/peterroelants/problog_vagrant.git
+    cd problog_vagrant
     vagrant init
 
 Starting VM and ssh session
