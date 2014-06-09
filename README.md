@@ -14,7 +14,6 @@ Install latest [VirtualBox version](https://www.virtualbox.org/wiki/Downloads).
 
     git clone https://github.com/peterroelants/problog_vagrant.git
     cd problog_vagrant
-    vagrant init
 
 Starting VM and ssh session
 ---------------------------
@@ -36,6 +35,26 @@ Examples:
 
     /home/vagrant/libs/problog2/src/problog.py -h
     /home/vagrant/libs/problog2/src/problog.py /home/vagrant/libs/problog2/tests/models/1_tossing_coin.pl
+
+
+Shutting down or destroying the VM
+----------------------------------
+
+The VM can be shut down by running `vagrant halt` in the Vagrant folder. The VM will shut down, and its disk contents will be saved.
+
+The VM can be removed by running `vagrant destroy` in the Vagrant folder. This wil remove the virtual machine, but keep the files in the shared /vagrant/ folder.
+
+More information can be found in the [Vagrant documentation](http://docs.vagrantup.com/v2/getting-started/teardown.html).
+
+
+Increasing memory
+-----------------
+
+By default this VM is configured to use 2GB of memory. You can increase the memory by changing the `v.memory = 2048` line in the Vagrant file, followed by running `vagrant reload --provision` if the VM is running or just `vagrant up` if the VM is not yet running.
+
+An other option is to increase the available memory in VirtualBox. Halt the VM with `vagrant halt`, start VirtualBox, select the Vagrant VM running ProbLog, go to *settings*, *System*, and change the allocated memory.
+
+
 
 
 
