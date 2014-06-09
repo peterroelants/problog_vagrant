@@ -50,9 +50,9 @@ More information can be found in the [Vagrant documentation](http://docs.vagrant
 Increasing memory
 -----------------
 
-By default this VM is configured to use 2GB of memory. You can increase the memory by changing the `v.memory = 2048` line in the Vagrant file, followed by running `vagrant reload --provision` if the VM is running or just `vagrant up` if the VM is not yet running.
+By default this VM is configured to use 2GB of memory. You can increase the memory by changing the `v.memory = 2048` line in the Vagrant file, followed by running `vagrant reload --provision` if the VM is running, or just run `vagrant up` if the VM is not yet running.
 
-An other option is to increase the available memory in VirtualBox. Halt the VM with `vagrant halt`, start VirtualBox, select the Vagrant VM running ProbLog, go to *settings*, *System*, and change the allocated memory.
+An other option is to increase the available memory in VirtualBox. Halt the VM with `vagrant halt`, start VirtualBox, select the Vagrant VM running ProbLog, go to *Settings*, *System*, and change the allocated memory.g
 
 
 
